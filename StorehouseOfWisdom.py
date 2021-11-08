@@ -1,7 +1,4 @@
 class StorehouseOfWisdom:
-    PUNCTUATION_SYMBOLS = [',', '.', ';', '-', ':', '-', '?', '!']
-    MAX_CONTENT_SIZE = 4096
-
     def __init__(self, content):
         self.content = content
 

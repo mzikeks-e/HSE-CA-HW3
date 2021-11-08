@@ -2,6 +2,7 @@ import StorehouseOfWisdom
 from Riddle import Riddle
 from Aphorism import Aphorism
 from Saying import Saying
+import generator
 
 
 class Container:
@@ -35,7 +36,15 @@ class Container:
             self.length += 1
 
     def inputRandom(self, size):
-        pass
+        for i in range(size):
+            type_wisdom = generator.nextInt(0, 3)
+            if type_wisdom == 0:
+                self.container.append(generator.getRandomRiddle())
+            elif type_wisdom == 1:
+                self.container.append(generator.getRandomAphorism())
+            else:
+                self.container.append(generator.getRandomSaying())
+            self.length += 1
 
     def progressingV22(self, filename):
         file = open(filename, 'w')
