@@ -2,15 +2,13 @@ import StorehouseOfWisdom
 
 
 class Saying(StorehouseOfWisdom):
-    def __init__(self):
-        self.country = ""
+    def __init__(self, content, country):
+        self.country = country
+        super(content)
 
-    @staticmethod
-    def input(file):
-        saying = Saying()
-        return saying
+    def __str__(self):
+        return f'It is Saying ' \
+               f'from {self.country}: ' \
+               f'{self.content}. ' \
+               f'Quotient = {self.getQuonitent()}'
 
-    @staticmethod
-    def inputRandom():
-        saying = Saying()
-        return saying

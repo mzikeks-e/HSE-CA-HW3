@@ -2,15 +2,12 @@ import StorehouseOfWisdom
 
 
 class Aphorism(StorehouseOfWisdom):
-    def __init__(self):
-        self.author = ""
+    def __init__(self, content, author):
+        self.author = author
+        super(content)
 
-    @staticmethod
-    def input(file):
-        aphorism = Aphorism()
-        return aphorism
-
-    @staticmethod
-    def inputRandom():
-        aphorism = Aphorism()
-        return aphorism
+    def __str__(self):
+        return f'It is Aphorism. ' \
+               f'{self.content} - says ' \
+               f'{self.author}. ' \
+               f'Quotient = {self.getQuonitent()}'

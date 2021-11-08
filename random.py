@@ -1,4 +1,7 @@
-def random(to):
+import random
+
+
+def nextInt(to):
     return 0
 
 
