@@ -11,7 +11,10 @@ def nextInt(from_, to):
 def generateContent(length):
     generated_string = ''
     for i in range(length):
-        generated_string += nextInt(32, 124)
+        generated_symbol = chr(nextInt(ord('A'), ord('z') + 1))
+        while not generated_symbol.isalpha():
+            generated_symbol = chr(nextInt(ord('A'), ord('z') + 1))
+        generated_string += generated_symbol
 
     return generated_string
 
