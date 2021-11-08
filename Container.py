@@ -47,17 +47,17 @@ class Container:
             self.length += 1
 
     def progressingV22(self, filename):
-        file = open(filename, 'w')
+        file = open('./out/' + filename, 'w')
         mean = sum([i.getQuotient() for i in self.container]) / len(self.container)
         file.write(f'Arithmetic mean: {mean}\n')
 
-        file.writelines([el + "\t" + el.getQuotient() for el in self.container
+        file.writelines([str(el) + '\n' for el in self.container
                          if el.getQuotient() <= mean])
-        file.writelines([el + "\t" + el.getQuotient() for el in self.container
+        file.writelines([str(el) + '\n' for el in self.container
                          if el.getQuotient() > mean])
 
     def out(self, filename):
-        file = open(filename, 'w')
-        file.write(f'Container contains {len(self.container)} elements.')
-        file.writelines([el for el in self.container])
+        file = open('./out/' + filename, 'w')
+        file.write(f'Container contains {len(self.container)} elements.\n')
+        file.writelines([str(el) + '\n' for el in self.container])
 
