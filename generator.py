@@ -4,6 +4,9 @@ from Aphorism import Aphorism
 from Saying import Saying
 
 
+collection_for_generation = 'qwertyuiop[]sdfghjkl;zxcvbnm,./?!#()*QWERTYUIOPASDFGHJKLZXCVBNM'
+
+
 def nextInt(from_, to):
     return random.randint(from_, to)
 
@@ -11,11 +14,7 @@ def nextInt(from_, to):
 def generateContent(length):
     generated_string = ''
     for i in range(length):
-        generated_symbol = chr(nextInt(ord('A'), ord('z') + 1))
-        while not generated_symbol.isalpha():
-            generated_symbol = chr(nextInt(ord('A'), ord('z') + 1))
-        generated_string += generated_symbol
-
+        generated_string += random.choice(collection_for_generation)
     return generated_string
 
 

@@ -16,7 +16,7 @@ def main():
         if inp[0] == '-f':
             container.input(inp[1])
         elif inp[0] == '-n':
-            if int(inp[1]) > 10000:
+            if int(inp[1]) > 10010:
                 raise AttributeError('Error! Count for generation should be < 10000')
             container.inputRandom(int(inp[1]))
         else:
