@@ -1,28 +1,38 @@
 import sys
+import os
 from Container import Container
 
 
 def main():
-    inp = sys.argv[1:]
-    if len(inp) != 4:
-        printInputError()
-        return
+    try:
+        inp = sys.argv[1:]
+        if len(inp) != 4:
+            printInputError()
+            return
 
-    print('Start. Please, check, that all spaces in content of storehouse replaced with _.')
-    container = Container()
+        print('Start. Please, check, that all spaces in content of storehouse replaced with _.')
+        container = Container()
 
-    if inp[0] == '-f':
-        container.input(inp[1])
-    elif inp[0] == '-n':
-        container.inputRandom(int(inp[1]))
+        if inp[0] == '-f':
+            container.input(inp[1])
+        elif inp[0] == '-n':
+            if int(inp[1]) > 10000:
+                raise AttributeError('Error! Count for generation should be < 10000')
+            container.inputRandom(int(inp[1]))
+        else:
+            printInputError()
+            return
+
+        if not os.path.isdir('out'):
+            os.mkdir('out')
+        container.out(inp[2])
+        container.progressingV22(inp[3])
+        container.clear()
+
+    except Exception as e:
+        print(e)
     else:
-        printInputError()
-        return
-
-    container.out(inp[2])
-    container.progressingV22(inp[3])
-    container.clear()
-    print("finished")
+        print('Successfully finished')
 
 
 def printInputError():
