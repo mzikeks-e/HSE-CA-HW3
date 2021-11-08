@@ -1,0 +1,7 @@
+Container contains 6 elements.
+It is Riddle. Question: What_is_it???. Answer: it_is_riddle. Quotient = 0.38461538461538464
+It is Riddle. Question: Lamp?. Answer: pear. Quotient = 0.2
+It is Aphorism. What_aphorism - says "Teacher". Quotient = 0.07692307692307693
+It is Saying from Russia: Where?. Quotient = 0.16666666666666666
+It is Aphorism. in_russia_there_are_two_problems - says "wwwww". Quotient = 0.15625
+It is Saying from Russia: Where?. Quotient = 0.16666666666666666

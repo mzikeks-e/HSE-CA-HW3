@@ -1,0 +1,4 @@
+Arithmetic mean: 0.15384615384615385
+It is Aphorism. What_aphorism - says "Teacher". Quotient = 0.07692307692307693
+It is Saying from Russia: Where. Quotient = 0.0
+It is Riddle. Question: What_is_it???. Answer: it_is_riddle. Quotient = 0.38461538461538464
